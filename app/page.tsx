@@ -1,4 +1,5 @@
 "use client";
+import ListingCard from "@incubee/components/ui/ListingCard";
 import Filterbox from "@incubee/components/ui/filterbox";
 import { ModeToggle } from "@incubee/components/ui/modetoggle";
 import {
@@ -7,6 +8,7 @@ import {
   ResizablePanelGroup,
 } from "@incubee/components/ui/resizable";
 import Search from "@incubee/components/ui/search";
+import { SortBY } from "@incubee/components/ui/sortBy";
 
 export default function Home() {
   const defaultLayout = [200, 800];
@@ -37,7 +39,18 @@ export default function Home() {
           minSize={40}
           className="p-5"
         >
-          Listings will appear here
+          <div className="flex justify-between my-5">
+            <div className="flex space-x-1">
+              <h4 className="font-bold">64 Results</h4>
+              <span className="dark:text-neutral-400">in Lagos, Nigeria</span>
+            </div>
+
+            <SortBY />
+          </div>
+
+          <div className="grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 my-5">
+            <ListingCard />
+          </div>
         </ResizablePanel>
 
         <ResizableHandle withHandle className="hidden xl:block" />
