@@ -1,6 +1,7 @@
 "use client";
 import ListingCard from "@incubee/components/ui/ListingCard";
 import Filterbox from "@incubee/components/ui/filterbox";
+import Header from "@incubee/components/ui/header";
 import { ModeToggle } from "@incubee/components/ui/modetoggle";
 import {
   ResizableHandle,
@@ -14,6 +15,7 @@ export default function Home() {
   const defaultLayout = [200, 800];
   return (
     <div className="w-full h-screen">
+      <Header />
       <ResizablePanelGroup
         direction="horizontal"
         onLayout={(sizes: number[]) => {

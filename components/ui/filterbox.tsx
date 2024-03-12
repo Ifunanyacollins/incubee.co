@@ -70,42 +70,42 @@ function Filterbox() {
         </div>
       ),
     },
-    {
-      key: "item-3",
-      title: "Number of Incubees",
-      children: (
-        <div className="w-full">
-          <SliderRange defaultValue={[1, 100]} minStepsBetweenThumbs={1} />
-          <div className="flex justify-between my-3">
-            <span>1</span>
+    // {
+    //   key: "item-3",
+    //   title: "Number of Incubees",
+    //   children: (
+    //     <div className="w-full">
+    //       <SliderRange defaultValue={[1, 100]} minStepsBetweenThumbs={1} />
+    //       <div className="flex justify-between my-3">
+    //         <span>1</span>
 
-            <span>100</span>
-          </div>
-        </div>
-      ),
-    },
-    {
-      key: "item-4",
-      title: "Price",
-      children: (
-        <div className="w-full">
-          {/* 
-             Range here will be addressed in percentage, for instance if the minimum amount is $1 and max amount is $5000
-             The slider component can only handle 0 - 100 so if a user slides to [10 - 50] what that means is 50% of  $5000 and 10% of it 
-            */}
-          <SliderRange
-            defaultValue={[0, 100]}
-            minStepsBetweenThumbs={1}
-            onValueChange={(VAL) => console.log(VAL)}
-          />
-          <div className="flex justify-between my-3">
-            <span>$1</span>
+    //         <span>100</span>
+    //       </div>
+    //     </div>
+    //   ),
+    // },
+    // {
+    //   key: "item-4",
+    //   title: "Price",
+    //   children: (
+    //     <div className="w-full">
+    //       {/*
+    //          Range here will be addressed in percentage, for instance if the minimum amount is $1 and max amount is $5000
+    //          The slider component can only handle 0 - 100 so if a user slides to [10 - 50] what that means is 50% of  $5000 and 10% of it
+    //         */}
+    //       <SliderRange
+    //         defaultValue={[0, 100]}
+    //         minStepsBetweenThumbs={1}
+    //         onValueChange={(VAL) => console.log(VAL)}
+    //       />
+    //       <div className="flex justify-between my-3">
+    //         <span>$1</span>
 
-            <span>$5000</span>
-          </div>
-        </div>
-      ),
-    },
+    //         <span>$5000</span>
+    //       </div>
+    //     </div>
+    //   ),
+    // },
   ];
 
   return <ExtendedAccordion items={items} type="multiple" />;
