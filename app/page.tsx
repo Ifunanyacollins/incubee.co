@@ -1,4 +1,5 @@
 "use client";
+import Filterbox from "@incubee/components/ui/filterbox";
 import { ModeToggle } from "@incubee/components/ui/modetoggle";
 import {
   ResizableHandle,
@@ -8,7 +9,7 @@ import {
 import Search from "@incubee/components/ui/search";
 
 export default function Home() {
-  const defaultLayout = [100, 800, 265];
+  const defaultLayout = [200, 800];
   return (
     <div className="w-full h-screen">
       <ResizablePanelGroup
@@ -24,9 +25,11 @@ export default function Home() {
           defaultSize={defaultLayout[0]}
           minSize={18}
           maxSize={20}
-          className="hidden md:block p-5"
+          className="hidden md:block p-5 space-y-10"
         >
           <Search />
+
+          <Filterbox />
         </ResizablePanel>
         <ResizableHandle withHandle className="hidden md:block" />
         <ResizablePanel
@@ -34,7 +37,7 @@ export default function Home() {
           minSize={40}
           className="p-5"
         >
-          <ModeToggle />
+          Listings will appear here
         </ResizablePanel>
 
         <ResizableHandle withHandle className="hidden xl:block" />
